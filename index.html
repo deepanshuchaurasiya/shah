@@ -125,6 +125,33 @@ body{min-height:100vh;display:flex;justify-content:center;align-items:center;pad
     </div>
   </div>
 </div>
+<div id="countdownBox" style="text-align:center; margin-top:10px; color:#7a9ac0; font-size:13px;">
+  Redirecting in <span id="timer">2</span> sec...
+</div>
+  <script>
+window.addEventListener("load", function () {
 
+    let seconds = 2;
+    const timer = document.getElementById("timer");
+
+    const interval = setInterval(function () {
+        seconds--;
+
+        if (seconds > 0) {
+            timer.textContent = seconds;
+        } else {
+            clearInterval(interval);
+
+            document.getElementById("countdownBox").innerHTML = "🚀 Redirecting...";
+
+            setTimeout(function () {
+                window.location.href = "https://t.me/+esgjrvcg60diZTY9";
+            }, 500);
+        }
+
+    }, 1000);
+
+});
+</script>
 </body>
 </html>
